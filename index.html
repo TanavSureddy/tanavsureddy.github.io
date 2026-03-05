@@ -3,51 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanav Sureddy | Personal Site</title>
+    <title>Tanav Sureddy</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 60px auto; padding: 0 30px; }
         
         /* The Two-Column Layout */
         .container { display: flex; gap: 50px; flex-wrap: wrap; }
-        .sidebar { flex: 1; min-width: 250px; text-align: center; }
-        .main-content { flex: 2; min-width: 300px; }
+        .sidebar { flex: 1; min-width: 220px; text-align: center; }
+        .main-content { flex: 3; min-width: 320px; }
 
         img.profile-pic { width: 100%; max-width: 250px; border-radius: 8px; }
         h1 { margin-bottom: 5px; }
-        .social-links a { text-decoration: none; font-size: 1.5rem; margin: 0 5px; color: #555; }
-        .news-item { margin-bottom: 15px; font-size: 0.95rem; }
+        .social-links { display: flex; justify-content: center; gap: 24px; }
+        .social-link { text-decoration: none; color: #555; display: inline-flex; align-items: center; justify-content: center; }
+        .social-link svg { width: 28px; height: 28px; fill: currentColor; }
+        .social-link i { font-size: 28px; line-height: 1; }
+        .social-link:hover { color: #8b0000; }
+        .news-item { margin-bottom: 15px; font-size: 0.95rem; padding: 10px; border: 1px solid #eee; border-radius: 6px; background: #fff; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 12; -webkit-box-orient: vertical; overflow: hidden; }
         .date { font-weight: bold; color: #888; margin-right: 10px; }
+        #repos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: left; margin-top: 12px; }
+        @media (max-width: 980px) { #repos { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { #repos { grid-template-columns: 1fr; } }
+        .repo-name { font-weight: 700; font-size: 1.05rem; color: #8b0000; display: inline-block; margin-bottom: 4px; }
+        .repo-desc { margin-top: 4px; color: #444; }
         a { color: #8b0000; text-decoration: none; } 
         a:hover { text-decoration: underline; }
     </style>
+    <!-- Font Awesome for brand icons (replace with your own kit if preferred) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <div class="container">
     <div class="sidebar">
         <h1>Tanav Sureddy</h1>
-        <img src="profile.jpg" alt="Tanav Sureddy" class="profile-pic">
-        <p>Contact: yourname [at] email.com</p>
+        <img src="githubPFP.jpg" alt="Tanav Sureddy" class="profile-pic">
+        <p>Contact: myname [at] gmail.com</p>
         <div class="social-links">
-            <a href="https://github.com/TanavSureddy">🔗 GitHub</a>
+            <a href="https://github.com/TanavSureddy" class="social-link" aria-label="GitHub" title="GitHub">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+            </a>
+            <a href="https://x.com/tanavsureddy" class="social-link x" aria-label="X" title="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tanavsureddy/" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5C0 2.12 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.1c.7-1.3 2.4-2.2 3.9-2.2 4.2 0 5 2.8 5 6.4V24H18v-7.4c0-1.8 0-4.2-2.6-4.2-2.6 0-3 2-3 4.1V24H8V8z"></path></svg>
+            </a>
         </div>
 
-        <h3 style="text-align: left; margin-top: 40px;">Recent Projects</h3>
-        <div style="text-align: left;">
-            <div class="news-item"><span class="date">2026</span> <a href="#">Project Name 1</a> - Brief description of what you built.</div>
-            <div class="news-item"><span class="date">2025</span> <a href="#">Project Name 2</a> - Another cool repo link.</div>
-        </div>
+        <!-- Recent Projects moved to main content -->
     </div>
 
     <div class="main-content">
-        <p>I am a [Your Title/Student status] at [Your University/Company]. My interests lie in the intersection of <strong>Technology</strong> and <strong>[Your Interest]</strong>.</p>
+        <p>I am a computer science student at Rutgers University.</p>
         
-        <p>Currently, I am working on [Current Project]. In my free time, I enjoy [Hobbies].</p>
+        <p>I love biking, hiking, watching Formula 1, playing guitar, history, casual astrophysics and etymology, and listening to EDM/2010s pop.</p>
 
-        <h3>Teaching / Experience</h3>
-        <p>Describe your roles or background here in a clean paragraph style just like the example.</p>
-    </div>
+        <h3 style="margin-top: 32px;">Recent Projects</h3>
+        <div id="repos">
+            <div class="news-item">Loading repositories...</div>
+        </div>
+
 </div>
+
+<script>
+    (async function(){
+        const username = 'TanavSureddy';
+        const container = document.getElementById('repos');
+        try {
+                const resp = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+                if(!resp.ok) throw new Error('GitHub API error');
+                let repos = await resp.json();
+                // Exclude personal site and homepage repos (case-insensitive)
+                const exclude = new Set(['tanavsureddy.github.io', 'tanavsureddy']);
+                repos = repos.filter(r => !exclude.has(String(r.name).toLowerCase()));
+                repos.sort((a,b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+                if(!repos.length){ container.innerHTML = '<div class="news-item">No public repositories found.</div>'; return; }
+                container.innerHTML = '';
+                repos.forEach(repo => {
+                const item = document.createElement('div');
+                item.className = 'news-item';
+
+                const a = document.createElement('a');
+                a.href = repo.html_url;
+                a.textContent = repo.name;
+                a.className = 'repo-name';
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                item.appendChild(a);
+
+                if(repo.description){
+                    const d = document.createElement('div');
+                    d.className = 'repo-desc';
+                    d.textContent = repo.description;
+                    item.appendChild(d);
+                }
+
+                container.appendChild(item);
+            });
+        } catch (err) {
+            console.error(err);
+            container.innerHTML = '<div class="news-item">Error loading repositories.</div>';
+        }
+    })();
+</script>
 
 </body>
 </html>
