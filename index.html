@@ -1,7 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanav Sureddy | Personal Site</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        /* The Two-Column Layout */
+        .container { display: flex; gap: 50px; flex-wrap: wrap; }
+        .sidebar { flex: 1; min-width: 250px; text-align: center; }
+        .main-content { flex: 2; min-width: 300px; }
+
+        img.profile-pic { width: 100%; max-width: 250px; border-radius: 8px; }
+        h1 { margin-bottom: 5px; }
+        .social-links a { text-decoration: none; font-size: 1.5rem; margin: 0 5px; color: #555; }
+        .news-item { margin-bottom: 15px; font-size: 0.95rem; }
+        .date { font-weight: bold; color: #888; margin-right: 10px; }
+        a { color: #8b0000; text-decoration: none; } 
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
 <body>
-  <h1>Hello World!</h1>
-  <p>Welcome to my new website hosted on GitHub.</p>
+
+<div class="container">
+    <div class="sidebar">
+        <h1>Tanav Sureddy</h1>
+        <img src="profile.jpg" alt="Tanav Sureddy" class="profile-pic">
+        <p>Contact: yourname [at] email.com</p>
+        <div class="social-links">
+            <a href="https://github.com/TanavSureddy">🔗 GitHub</a>
+        </div>
+
+        <h3 style="text-align: left; margin-top: 40px;">Recent Projects</h3>
+        <div style="text-align: left;">
+            <div class="news-item"><span class="date">2026</span> <a href="#">Project Name 1</a> - Brief description of what you built.</div>
+            <div class="news-item"><span class="date">2025</span> <a href="#">Project Name 2</a> - Another cool repo link.</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <p>I am a [Your Title/Student status] at [Your University/Company]. My interests lie in the intersection of <strong>Technology</strong> and <strong>[Your Interest]</strong>.</p>
+        
+        <p>Currently, I am working on [Current Project]. In my free time, I enjoy [Hobbies].</p>
+
+        <h3>Teaching / Experience</h3>
+        <p>Describe your roles or background here in a clean paragraph style just like the example.</p>
+    </div>
+</div>
+
 </body>
 </html>
