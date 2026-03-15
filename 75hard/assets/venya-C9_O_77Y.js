@@ -1,1 +1,0 @@
-import{a as e,i as t,o as n}from"./browser-B77OIPgF.js";import{t as r}from"./Tracker-CCmfaddb.js";var i=n(),a=e(),o=t();(0,a.createRoot)(document.getElementById(`root`)).render((0,o.jsx)(i.StrictMode,{children:(0,o.jsx)(r,{user:`venya`,accentColor:`#B8C6AC`})}));
